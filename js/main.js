@@ -56,3 +56,20 @@ fetch( filepath )
   })
 
 } 
+
+
+const loadFont = ( name ) => {
+  // get data from fonts.json
+  // apply font to <head>
+} 
+const getVariable = ( property, element ) => {
+  let el = element ? document.querySelector(element) : document.querySelector('html');
+  var cs = getComputedStyle(el);
+  return cs.getPropertyValue(property);
+} 
+const setVariable = ( property, value, element ) => {
+  let el = element ? document.querySelector(element) : document.querySelector('html');
+  el.style.setProperty( property, value );
+} 
+
+
