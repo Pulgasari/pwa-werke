@@ -1,3 +1,20 @@
+html {
+  --maintext-align: 'justify';
+  --maintext-font: 'Montserrat Alternates';
+  --maintext-fontcolor: '#AAA';
+/*  --maintext-fontsize: 1em; */
+
+}
+html[data-theme='dark'] {
+
+}
+html[data-theme='light'] {
+
+} 
+html[data-theme='oled'] {
+
+} 
+
 body {
   font-family: sans-serif;
 }
@@ -25,7 +42,7 @@ html,
 
 /* */
 
-main {
+main.container {
 
   p { text-align: justify; } 
   
