@@ -30,23 +30,19 @@ html,
 }
 
 /* Center the content in the browser window */
-.container {
+#main {
   margin: auto;
   text-align: center;
 }
+#main p { text-align: justify; }
+
 
 .title {
   font-size: 3rem;
 }
 
 
-/* */
-
-main.container {
-
-  p { text-align: 'justify'; } 
-  
-} 
+/* */   
 
 html[data-maintext-align="center"]  { --maintext-align:  'center'; }
 html[data-maintext-align="justify"] { --maintext-align: 'justify'; } 
