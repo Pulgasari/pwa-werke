@@ -1,7 +1,7 @@
 [
   {
-    id: '1233456789',
-    authorName: 'Josef Dietzgen', 
-    title: 'Das Wesen der Menschlichen Kopfarbeit'
+    'id': '1233456789',
+    'authorName': 'Josef Dietzgen', 
+    'title': 'Das Wesen der Menschlichen Kopfarbeit'
   } 
 ]
