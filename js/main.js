@@ -63,20 +63,20 @@ const loadFont = ( name ) => {
   // apply font to <head>
 } 
 const getVariable = ( property, selector ) => {
-  let el = selector ? document.querySelector(selector) : document.querySelector('html');
+  let el = selector ? document.querySelector(selector) : document.documentElement; // document.querySelector('html');
   var cs = getComputedStyle(el);
   return cs.getPropertyValue(property);
 } 
 const setVariable = ( property, value, selector ) => {
-  let el = selector ? document.querySelector(selector) : document.querySelector('html');
+  let el = selector ? document.querySelector(selector) : document.documentElement; // document.querySelector('html');
   el.style.setProperty( property, value );
 }
 const getDataValue = ( name, selector ) => {
-  let el = selector ? document.querySelector(selector) : document.querySelector('html');
+  let el = selector ? document.querySelector(selector) : document.documentElement; // document.querySelector('html');
   return el.getAttribute( 'data-' + name );
 } 
 const setDataValue = ( name, value, selector ) => {
-  let el = selector ? document.querySelector(selector) : document.querySelector('html');
+  let el = selector ? document.querySelector(selector) : document.documentElement; // document.querySelector('html');
   el.setAttribute( 'data-' + name, value );
 } 
 
