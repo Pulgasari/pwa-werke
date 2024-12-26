@@ -1,9 +1,7 @@
 window.onload = () => {
   'use strict';
 
-  let container = document.getElementById('main');
-  let md = useFetchedData( 'md/Das Wesen der Menschlichen Kopfarbeit.md' );
-  container.innerHTML = markdown( md );
+  useFetchedData( 'md/Das Wesen der Menschlichen Kopfarbeit.md');
   
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
@@ -26,7 +24,12 @@ async function loadFile2( url ) {
 }
 // Function to use the fetched string
 async function useFetchedData(url) {
-    const result = await loadFile2(url);
+  //  const result = await loadFile2(url);
+
+  let container = document.getElementById('main');
+  let md = await loadFile2( url );
+  container.innerHTML = markdown( md );
+  
     console.log(result); // Do something with the result
 }
 
