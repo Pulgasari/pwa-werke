@@ -21,3 +21,14 @@ html,
 .title {
   font-size: 3rem;
 }
+
+
+/* */
+
+main {
+
+  p { text-align: justify; } 
+  
+} 
+
+*[data-align="justify"] { text-align: justify; } 
