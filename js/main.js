@@ -2,7 +2,7 @@ window.onload = () => {
   'use strict';
 
   let container = document.getElementById('main');
-  let md = loadFile( 'md/Das Wesen der Menschlichen Kopfarbeit.md' );
+  let md = useFetchedData( 'md/Das Wesen der Menschlichen Kopfarbeit.md' );
   container.innerHTML = markdown( md );
   
   if ('serviceWorker' in navigator) {
@@ -10,6 +10,27 @@ window.onload = () => {
              .register('./sw.js');
   }
 }
+
+async function loadFile2( URL ) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.text(); // Assuming the response is a text string
+        return data;
+    } catch (error) {
+        console.error('Fetch error:', error);
+        return 'Error fetching data';
+    }
+}
+// Function to use the fetched string
+async function useFetchedData(url) {
+    const result = await loadFile2(url);
+    console.log(result); // Do something with the result
+}
+
+
 
 
 const loadFile = async ( filepath ) => {
@@ -28,6 +49,7 @@ fetch( filepath )
   })
   .catch(error => {
      console.error('Failed to fetch page: ', error)
+     return 'Error';
   })
 
 } 
