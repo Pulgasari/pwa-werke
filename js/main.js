@@ -2,7 +2,7 @@ window.onload = () => {
   'use strict';
 
   let container = document.getElementById('main');
-  let md = await loadFile( 'md/Das Wesen der Menschlichen Kopfarbeit.md' );
+  let md = loadFile( 'md/Das Wesen der Menschlichen Kopfarbeit.md' );
   container.innerHTML = markdown( md );
   
   if ('serviceWorker' in navigator) {
@@ -12,7 +12,7 @@ window.onload = () => {
 }
 
 
-async function loadFile( filepath ){
+const loadFile = async ( filepath ) => {
 
   console.log('function called: loadFile()');
   console.log( filepath );
