@@ -1,7 +1,12 @@
 [
   {
-    'id': '1233456789',
-    'authorName': 'Josef Dietzgen', 
-    'title': 'Das Wesen der Menschlichen Kopfarbeit'
+    "id" : "1233456789",
+    "authorName" : "Josef Dietzgen", 
+    "title" : "Das Wesen der Menschlichen Kopfarbeit"
+  }, 
+  {
+    "id" : "666777666",
+    "authorName" : "Franz Mehring", 
+    "title" : "Irgendwas mit Karl Marx"
   } 
 ]
