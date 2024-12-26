@@ -11,7 +11,7 @@ window.onload = () => {
   }
 }
 
-async function loadFile2( URL ) {
+async function loadFile2( url ) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
