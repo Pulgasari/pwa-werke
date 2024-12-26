@@ -44,8 +44,24 @@ html,
 
 main.container {
 
-  p { text-align: justify; } 
+  p { text-align: 'justify'; } 
   
 } 
 
-*[data-align="justify"] { text-align: justify; } 
+html[data-maintext-align="center"]  { --maintext-align:  'center'; }
+html[data-maintext-align="justify"] { --maintext-align: 'justify'; } 
+html[data-maintext-align="left"]    { --maintext-align:    'left'; }
+html[data-maintext-align="right"]   { --maintext-align:   'right'; }
+
+html[data-headlines-align="center"]  { --headlines-align:  'center'; }
+html[data-headlines-align="justify"] { --headlines-align: 'justify'; } 
+html[data-headlines-align="left"]    { --headlines-align:    'left'; }
+html[data-headlines-align="right"]   { --headlines-align:   'right'; }
+
+
+
+
+
+
+
+
