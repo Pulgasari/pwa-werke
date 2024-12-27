@@ -178,6 +178,8 @@ const initTexte = async () => {
   let container = document.getElementById('text');
   let texte = await loadJSON('fakedata');
   
+  console.log( 'texte', texte );
+  
   texte.forEach( el => {
     html.concat(
       `<div>
