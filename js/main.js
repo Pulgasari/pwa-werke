@@ -95,6 +95,14 @@ const setStyle = ( id, value ) => {
   setVariable( '--' + id, value ); // set in html
 }
 
+const openTab = id => {
+  // hide all tabs
+  document.querySelectorAll('.tab').forEach( el => {
+    el.style.display = 'none';
+  });
+  // unhide tab
+  document.getElementById(id).style.display = 'block';
+}
 
 function init() {
 
