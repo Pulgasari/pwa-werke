@@ -137,7 +137,7 @@ const openTab = id => {
 // Handling of Minitabs
 const toggleMinitab = id => {
   console.log( 'toggleMinitab(' + id + ') triggered.' );
-  document.querySelectorAll('minitab').forEach( el => {
+  document.querySelectorAll('.minitab').forEach( el => {
     console.log( 'Processing Minitab: ' + el.id + ' ...' );
     console.log( el.id + ' === ' + id );
     if( el.id === id ){
