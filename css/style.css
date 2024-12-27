@@ -34,7 +34,7 @@ html,
   width: 100%;
 }
 
-/* Center the content in the browser window */
+h1 { text-transform: uppercase; } 
 #main {
   margin: auto;
   padding: 1em;
