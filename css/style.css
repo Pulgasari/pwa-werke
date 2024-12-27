@@ -1,5 +1,6 @@
 html {
-  --maintext-align: 'justify';
+  --hyphens: auto;
+  --maintext-align: justify;
   --maintext-font: 'Montserrat Alternates';
   --maintext-fontcolor: '#AAA';
 /*  --maintext-fontsize: 1em; */
@@ -40,7 +41,10 @@ h1 { text-transform: uppercase; }
   padding: 1em;
   text-align: center;
 }
-#main p { text-align: justify; }
+#main p { 
+  hyphens: var(--hyphens); 
+  text-align: var(--maintext-align); 
+}
 
 
 .title {
