@@ -4,6 +4,7 @@ html {
   --maintext-align: justify;
   --maintext-font: 'Montserrat Alternates';
   --maintext-fontcolor: '#AAA';
+  --maintext-fontsize: 1em;
   --maintext-lineheight: 1.25em;
 /*  --maintext-fontsize: 1em; */
 
@@ -45,6 +46,7 @@ h1 { text-transform: uppercase; }
   text-align: center;
 }
 #main p { 
+  font-size: var(--maintext-fontsize);
   hyphens: var(--hyphens);
   line-height: var(--maintext-lineheight); 
   text-align: var(--maintext-align); 
