@@ -77,7 +77,7 @@ const loadFont = async ( name ) => {
   head.insertAdjacentHTML( 'beforeend', "<style@import url('" + url + "');</style>" );
 }
 const setFont = ( name ) => {
-  console.log('setFont() was triggered.';
+  console.log('setFont() was triggered.');
   // add to <head>
   loadFont(name);
   // set variable
@@ -93,7 +93,7 @@ const getVariable = ( property, selector ) => {
   return cs.getPropertyValue(property);
 } 
 const setVariable = ( property, value, selector ) => {
-  console.log('setVariable() was triggered.';
+  console.log('setVariable() was triggered.');
   let el = selector ? document.querySelector(selector) : document.documentElement; // document.querySelector('html');
   el.style.setProperty( property, value );
 }
