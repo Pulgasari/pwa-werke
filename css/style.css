@@ -91,9 +91,11 @@ nav span {
   flex-basis: 50%;
   gap: 1em;
 }
-#settings > label {
-  flex-basis: 50%;
-  gap: 1em;
+#settings label {
+  
+}
+#settings button {
+  font-size: 20px;
 }
 
 /* Make content area fill the entire browser window */
