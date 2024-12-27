@@ -5,13 +5,13 @@ html {
 /*  --maintext-fontsize: 1em; */
 
 }
-html[data-theme='dark'] {
+html[data-stylemode='dark'] {
 
 }
-html[data-theme='light'] {
+html[data-stylemode='light'] {
 
 } 
-html[data-theme='oled'] {
+html[data-stylemode='oled'] {
   --background-color: #000000;
   --fontcolor: #CCCCCC;
 } 
