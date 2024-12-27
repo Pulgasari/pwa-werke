@@ -7,10 +7,10 @@ window.onload = () => {
   useFetchedData( 'md/Das Wesen der Menschlichen Kopfarbeit.md');
 
   init();
-  
+
+  // register service worker
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-             .register('./sw.js');
+    navigator.serviceWorker.register('./sw.js');
   }
 }
 
@@ -30,7 +30,7 @@ async function loadFile2( url ) {
 // Function to use the fetched string
 async function useFetchedData(url) {
   //  const result = await loadFile2(url)
-  let container = document.getElementById('main');
+  let container = document.getElementById('reader');
   let md = await loadFile2( url );
   container.innerHTML = markdown( md );
 }
