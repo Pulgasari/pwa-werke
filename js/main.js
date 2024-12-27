@@ -81,5 +81,67 @@ const setDataValue = ( name, value, selector ) => {
 } 
 
 
+function init() {
+  
+  // fontsize
+  let fontsize = cookie( 'fontsize' ) || '14px';
+  setFontsize( fontsize );
+  
+  // theme
+  let theme = cookie( 'theme' ) || 'dark';
+  setTheme( theme );
 
+  // theme
+  initTheme();
+
+  // css variables
+  if( cookie('maintext-fontcolor') ){
+    setVariable( '--maintext-fontcolor', cookie('maintext-fontcolor') );
+  }
+  if( cookie('maintext-fontfamily') ){
+    setVariable( '--maintext-fontfamily', cookie('maintext-fontfamily') );
+  }
+
+  // (html) data
+  setDataValue( 'theme', cookie('theme') );
+  // (css) variables
+  setVariable( '--accentcolor',          cookie('accentcolor')          );
+  setVariable( '--brightness',           cookie('brightness')           );
+  setVariable( '--fontcolor',            cookie('fontcolor')            );
+  setVariable( '--fontsize',             cookie('fontsize')             );
+  setVariable( '--headlines-align',      cookie('headlines-align')      );
+  setVariable( '--headlines-fontfamily', cookie('headlines-fontfamily') );
+  setVariable( '--maintext-align',       cookie('maintext-align')       );
+  setVariable( '--maintext-fontfamily',  cookie('maintext-fontfamily')  );
+  
+
+} 
+
+const setFontsize = value => {
+        cookie( 'fontsize', value ); // set as cookie
+  setDataValue( 'fontsize', value ); // set in html
+} 
+const setTheme = name => {
+        cookie( 'theme', name ); // set as cookie
+  setDataValue( 'theme', name ); // set in html
+} 
+const initTheme = () => {
+  if( cookie('theme') ){
+    setDataValue( 'theme', cookie('theme') );
+  } 
+} 
+
+const initTheme2 = () => {
+  let value = cookie( 'theme' ) || 'dark';
+  setDataValue( 'theme', value ); 
+} 
+
+const setTheme2 = ( value ) => {
+  if( value ){
+    cookie( 'theme', value ); // set as cookie
+  } 
+  if( value = cookie('theme') ){
+    setDataValue( 'theme', value ); // set in html
+  } 
+} 
 
