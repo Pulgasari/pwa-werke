@@ -67,8 +67,10 @@ fetch( filepath )
 
 const loadFont = ( name ) => {
   // get data from fonts.json
+  let fonts = loadJSON('fonts');
+  let font = fonts[name];
   // apply font to <head>
-  let url = '';
+  let url = font.url;
   let head = document.querySelector('head');
   head.insertAdjacentHTML( 'beforeend', "<style@import url('" + url + "');</style>" );
 }
