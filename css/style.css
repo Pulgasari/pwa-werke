@@ -6,10 +6,12 @@ html {
 
 }
 html[data-stylemode='dark'] {
-
+  --background-color: #222222;
+  --fontcolor: #CCCCCC;
 }
 html[data-stylemode='light'] {
-
+  --background-color: #FFFFFF;
+  --fontcolor: #222222;
 } 
 html[data-stylemode='oled'] {
   --background-color: #000000;
