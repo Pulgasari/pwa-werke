@@ -107,7 +107,7 @@ const getVariable = ( property, selector ) => {
 const setVariable = ( property, value, selector ) => {
   console.log('setVariable() was triggered.');
   let el = selector ? document.querySelector(selector) : document.documentElement; // document.querySelector('html');
-  el.style.setProperty( property, value );
+  el.style.setProperty( '--' + property, value );
 }
 const getDataValue = ( name, selector ) => {
   let el = selector ? document.querySelector(selector) : document.documentElement; // document.querySelector('html');
@@ -122,8 +122,8 @@ const setMode = ( id, value ) => {
   setDataValue( id, value );  // set in html
 } 
 const setStyle = ( id, value ) => {
-       cookie(        id, value ); // set as cookie
-  setVariable( '--' + id, value ); // set in html
+       cookie( id, value ); // set as cookie
+  setVariable( id, value ); // set in html
   console.log( `setStyle( ${id}, ${value} ) triggered.` );
 }
 
