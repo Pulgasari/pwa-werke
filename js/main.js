@@ -69,6 +69,7 @@ const loadFont = ( name ) => {
   console.log('loadFont() was triggered.';
   // get data from fonts.json
   let fonts = loadJSON('fonts');
+  console.log( 'fonts', fonts );
   let font = fonts[name];
   // apply font to <head>
   let url = font.url;
