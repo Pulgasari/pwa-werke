@@ -74,7 +74,7 @@ const loadFont = async ( name ) => {
   // apply font to <head>
   let url = font.url;
   let head = document.querySelector('head');
-  head.insertAdjacentHTML( 'beforeend', "<style@import url('" + url + "');</style>" );
+  head.insertAdjacentHTML( 'beforeend', "<style>@import url('" + url + "');</style>" );
 }
 const setFont = ( name ) => {
   console.log('setFont() was triggered.');
