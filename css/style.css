@@ -14,6 +14,7 @@ html {
   --lineheight: 1.25em;
 /*  --maintext-fontsize: 1em; */
   --gap: 10px;
+  --gap-small: 5px;
   background: #000000;
 }
 html[data-stylemode='dark'] {
@@ -53,6 +54,7 @@ nav {
   flex-basis: 100px; height: 100px;
   flex-direction: row;
   flex-grow: 0;
+  flex-shrink: 0;
   position: sticky; bottom: 0;
 }
 nav div {
@@ -83,19 +85,20 @@ nav span {
   font-size: 10pt;
   line-height: 10pt;
 }
-#settings {
+#settings > div {
   display: flex;
   flex-wrap: wrap;
+  padding: var(--gap);
 }
-#settings > div {
+#settings > div > div {
   display: flex;
   flex-direction: column;
   flex-basis: 50%;
   /*flex-basis: calc( 50% - var(--gap) );*/
-  padding: var(--gap);
+  gap: var(--gap);
 }
 #settings label {
-  
+  margin-bottom: var(--gap-small);
 }
 #settings button {
   font-size: 20px;
