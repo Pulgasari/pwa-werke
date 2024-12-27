@@ -139,7 +139,9 @@ const toggleMinitab = id => {
   console.log( 'toggleMinitab(' + id + ') triggered.' );
   document.querySelectorAll('minitab').forEach( el => {
     console.log( 'Processing Minitab: ' + el.id + ' ...' );
+    console.log( el.id + ' === ' + id );
     if( el.id === id ){
+      console.log( 'minitab to toggle hase same id!' );
       el.style.display = ( el.style.display === 'block' ) ? 'none' : 'block';
     } else {
       el.style.display = 'none';
