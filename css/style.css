@@ -12,10 +12,13 @@ html[data-theme='light'] {
 
 } 
 html[data-theme='oled'] {
-
+  --background-color: #000000;
+  --fontcolor: #CCCCCC;
 } 
 
 body {
+  background-color: var(--background-color);
+  color: var(--fontcolor);
   font-family: sans-serif;
 }
 
