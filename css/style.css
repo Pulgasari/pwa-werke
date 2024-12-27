@@ -68,9 +68,10 @@ nav span {
 
 .minitab {
   background-color: var(--background-color);
-  flex-basis: 40%; height: 40%;
+  /* flex-basis: 40%; */
+  height: 30vh;
   flex-grow: 0;
-  position: sticky; bottom: 100px;
+  position: sticky; bottom: 80px;
 }
 
 /* Make content area fill the entire browser window */
