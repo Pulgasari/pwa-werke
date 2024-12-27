@@ -115,8 +115,58 @@ function init() {
   setVariable( '--maintext-fontfamily',  cookie('maintext-fontfamily')  );
   
 
+  // modes = (html) data
+  setMode('stylemode');
+  setMode('viewmode');
+  // styles = (css) variables
+  setStyle('accentcolor');
+  setStyle('brightness');
+  setStyle('fontcolor');
+  setStyle('fontsize');
+  setStyle('headlines-align');
+  setStyle('headlines-font');
+  setStyle('maintext-align');
+  setStyle('maintext-font');
+  
 } 
 
+
+
+
+
+
+
+// FINAL VARIANTS V1
+const setMode = ( id, value ) => {
+  if( value ){ cookie( id, value ); } // set as cookie 
+  setDataValue( id, value || cookie(id) ); // set in html
+}
+const setStyle = ( id, value ) => {
+  if( value ){ cookie( id, value ); } // set as cookie 
+  setVariable( '--' + id, value || cookie(id) ); // set in html
+} 
+
+// FINAL VARIANTS V2
+const initMode = id => {
+  if( cookie(id) ){
+    setDataValue( id, cookie(id) );
+  } 
+}
+const initStyle = id => {
+  if( cookie(id) ){
+    setVariable( '--' + id, cookie(id) );
+  } 
+}
+const setMode2 = ( id, value ) => {
+        cookie( id, value ); // set as cookie
+  setDataValue( id, value ); // set in html
+}
+const setStyle2 = ( id, value ) => {
+       cookie(        id, value ); // set as cookie
+  setVariable( '--' + id, value ); // set in html
+}
+
+/*
 const setFontsize = value => {
         cookie( 'fontsize', value ); // set as cookie
   setDataValue( 'fontsize', value ); // set in html
@@ -124,24 +174,6 @@ const setFontsize = value => {
 const setTheme = name => {
         cookie( 'theme', name ); // set as cookie
   setDataValue( 'theme', name ); // set in html
-} 
-const initTheme = () => {
-  if( cookie('theme') ){
-    setDataValue( 'theme', cookie('theme') );
-  } 
-} 
-
-const initTheme2 = () => {
-  let value = cookie( 'theme' ) || 'dark';
-  setDataValue( 'theme', value ); 
-} 
-
-const setTheme2 = ( value ) => {
-  if( value ){
-    cookie( 'theme', value ); // set as cookie
-  } 
-  if( value = cookie('theme') ){
-    setDataValue( 'theme', value ); // set in html
-  } 
-} 
+}
+*/
 
