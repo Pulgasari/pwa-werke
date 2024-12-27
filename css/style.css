@@ -63,12 +63,12 @@ html,
 
 h1, h2, h3, h4, h5, h6 { text-align: var(--headlines-align); } 
 h1 { text-transform: uppercase; } 
-main, #reader {
+#reader {
   margin: auto;
   padding: 1em;
   text-align: center;
 }
-#main p, #reader p { 
+#reader p { 
   font-size: var(--maintext-fontsize);
   hyphens: var(--hyphens);
   line-height: var(--maintext-lineheight); 
