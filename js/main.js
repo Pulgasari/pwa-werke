@@ -124,6 +124,7 @@ const setMode = ( id, value ) => {
 const setStyle = ( id, value ) => {
        cookie(        id, value ); // set as cookie
   setVariable( '--' + id, value ); // set in html
+  console.log( `setStyle( ${id}, ${value} ) triggered.` );
 }
 
 const openTab = id => {
