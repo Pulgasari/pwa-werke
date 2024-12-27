@@ -1,6 +1,8 @@
 (function(){ "use strict";
 
   this.cookie = ( name, value, days, domain ) => {
+
+    console.log('cookie() called');
   
     if( !name.startsWith('!') && !value && !days ){
   
