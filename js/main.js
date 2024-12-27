@@ -78,13 +78,52 @@ const getDataValue = ( name, selector ) => {
 const setDataValue = ( name, value, selector ) => {
   let el = selector ? document.querySelector(selector) : document.documentElement; // document.querySelector('html');
   el.setAttribute( 'data-' + name, value );
+}
+const setMode = ( id, value ) => {
+        cookie( id, value ); // set as cookie
+  setDataValue( id, value );  // set in html
 } 
+const setStyle = ( id, value ) => {
+       cookie(        id, value ); // set as cookie
+  setVariable( '--' + id, value ); // set in html
+}
 
 
 function init() {
+
+  // initialize modes
+  [ 'stylemode', 'viewmode' ]
+  .forEach( id => { if( cookie(id) ){ setDataValue( id, cookie(id) ) } });
+
+  // init styles
+  [ 'accentcolor', 'brightness', 'fontcolor', 'fontsize', 'headlines-align', 'headlines-font', 'maintext-align', 'maintext-font' ]
+  .forEach( id => { if( cookie(id) ){ setVariable( id, cookie(id) ) } });
   
-  // fontsize
-  let fontsize = cookie( 'fontsize' ) || '14px';
+} 
+
+
+
+
+
+
+
+
+
+
+/*
+const setFontsize = value => {
+        cookie( 'fontsize', value ); // set as cookie
+  setDataValue( 'fontsize', value ); // set in html
+} 
+const setTheme = name => {
+        cookie( 'theme', name ); // set as cookie
+  setDataValue( 'theme', name ); // set in html
+}
+*/
+
+
+/*
+let fontsize = cookie( 'fontsize' ) || '14px';
   setFontsize( fontsize );
   
   // theme
@@ -113,32 +152,11 @@ function init() {
   setVariable( '--headlines-fontfamily', cookie('headlines-fontfamily') );
   setVariable( '--maintext-align',       cookie('maintext-align')       );
   setVariable( '--maintext-fontfamily',  cookie('maintext-fontfamily')  );
-  
-
-  // modes = (html) data
-  setMode('stylemode');
-  setMode('viewmode');
-  // styles = (css) variables
-  setStyle('accentcolor');
-  setStyle('brightness');
-  setStyle('fontcolor');
-  setStyle('fontsize');
-  setStyle('headlines-align');
-  setStyle('headlines-font');
-  setStyle('maintext-align');
-  setStyle('maintext-font');
-  
-} 
-
-
-
-
-
-
-
+*/
+/*
 // FINAL VARIANTS V1
 const setMode = ( id, value ) => {
-  if( value ){ cookie( id, value ); } // set as cookie 
+  if (value) { cookie( id, value ) }  // set as cookie 
   setDataValue( id, value || cookie(id) ); // set in html
 }
 const setStyle = ( id, value ) => {
@@ -148,32 +166,67 @@ const setStyle = ( id, value ) => {
 
 // FINAL VARIANTS V2
 const initMode = id => {
-  if( cookie(id) ){
-    setDataValue( id, cookie(id) );
-  } 
+  if( cookie(id) ){ setDataValue( id, cookie(id) ); } 
 }
 const initStyle = id => {
   if( cookie(id) ){
     setVariable( '--' + id, cookie(id) );
   } 
 }
-const setMode2 = ( id, value ) => {
+*/
+
+/*
+  // modes = (html) data
+  setMode('stylemode');
+  setMode('viewmode');
+  
+  // styles = (css) variables
+  setStyle('accentcolor');
+  setStyle('brightness');
+  setStyle('fontcolor');
+  setStyle('fontsize');
+  setStyle('headlines-align');
+  setStyle('headlines-font');
+  setStyle('maintext-align');
+  setStyle('maintext-font');
+  */
+
+/*
+const setMode = ( id, value ) => {
         cookie( id, value ); // set as cookie
-  setDataValue( id, value ); // set in html
-}
-const setStyle2 = ( id, value ) => {
+  setDataValue( id, value );  // set in html
+} 
+const setStyle = ( id, value ) => {
        cookie(        id, value ); // set as cookie
   setVariable( '--' + id, value ); // set in html
 }
 
-/*
-const setFontsize = value => {
-        cookie( 'fontsize', value ); // set as cookie
-  setDataValue( 'fontsize', value ); // set in html
-} 
-const setTheme = name => {
-        cookie( 'theme', name ); // set as cookie
-  setDataValue( 'theme', name ); // set in html
-}
-*/
+const setMode  = ( id, value ) => { cookie( id, value ); setDataValue(        id, value ); } 
+const setStyle = ( id, value ) => { cookie( id, value );  setVariable( '--' + id, value ); }
 
+
+
+function init() {
+
+  [ 'stylemode', 'viewmode' ]
+  .forEach( id => {
+    if( cookie(id) ){ setDataValue( id, cookie(id) ) } 
+  });
+
+  [ 
+    'accentcolor', 
+    'brightness',
+    'fontcolor',
+    'fontsize',
+    'headlines-align', 
+    'headlines-font', 
+    'maintext-align', 
+    'maintext-font', 
+  ].forEach( id => {
+    if( cookie(id) ){ setVariable( id, cookie(id) ) } 
+  });
+  
+} 
+
+
+*/
