@@ -61,6 +61,7 @@ nav div {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  gap: var(--gap-small);
   justify-content: center;
   padding: var(--gap);
   text-align: center;
