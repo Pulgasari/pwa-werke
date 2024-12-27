@@ -90,8 +90,9 @@ nav span {
 #settings > div {
   display: flex;
   flex-direction: column;
-  flex-basis: calc( 50% - var(--gap) );
-  gap: var(--gap);
+  flex-basis: 50%;
+  /*flex-basis: calc( 50% - var(--gap) );*/
+  padding: var(--gap);
 }
 #settings label {
   
