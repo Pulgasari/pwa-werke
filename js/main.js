@@ -66,6 +66,7 @@ fetch( filepath )
 
 
 const loadFont = ( name ) => {
+  console.log('loadFont() was triggered.';
   // get data from fonts.json
   let fonts = loadJSON('fonts');
   let font = fonts[name];
@@ -91,6 +92,7 @@ const getVariable = ( property, selector ) => {
   return cs.getPropertyValue(property);
 } 
 const setVariable = ( property, value, selector ) => {
+  console.log('setVariable() was triggered.';
   let el = selector ? document.querySelector(selector) : document.documentElement; // document.querySelector('html');
   el.style.setProperty( property, value );
 }
