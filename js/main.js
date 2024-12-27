@@ -198,6 +198,9 @@ const initTexte = async () => {
 
 //----- VIA BUTTONS
 // Alignment of Maintext
+document.getElementById('hyphens-disabled' ).addEventListener( 'click', event => { setStyle( 'hyphens', 'none'  )});
+document.getElementById('hyphens-enabled'  ).addEventListener( 'click', event => { setStyle( 'hyphens', 'auto'  )});
+// Alignment of Maintext
 document.getElementById('maintext-align-center' ).addEventListener( 'click', event => { setStyle( 'maintext-align', 'center'  )});
 document.getElementById('maintext-align-justify').addEventListener( 'click', event => { setStyle( 'maintext-align', 'justify' )});
 document.getElementById('maintext-align-left'   ).addEventListener( 'click', event => { setStyle( 'maintext-align', 'left'    )});
