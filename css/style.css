@@ -75,6 +75,7 @@ nav span {
   height: 30vh;
   flex-grow: 0;
   padding: 1em;
+  overflow-y: auto;
   position: sticky; bottom: 80px;
 
   font-size: 10pt;
