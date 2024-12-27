@@ -69,7 +69,7 @@ const loadFont = async ( name ) => {
   console.log('loadFont() was triggered.';
   // get data from fonts.json
   let fonts = await loadJSON('fonts');
-  console.log( 'fonts', fonts );
+  console.log( 'fonts', fonts ); 
   let font = fonts[name];
   // apply font to <head>
   let url = font.url;
