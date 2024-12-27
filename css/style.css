@@ -100,7 +100,7 @@ nav span {
 #settings button {
   font-size: 20px;
 }
-#settings button {
+#settings input[type="text"], select {
   padding: var(--gap);
 }
 
