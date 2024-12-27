@@ -13,7 +13,7 @@ html {
   --fontsize: 12pt;
   --lineheight: 1.25em;
 /*  --maintext-fontsize: 1em; */
-
+  --gap: 10px;
 }
 html[data-stylemode='dark'] {
   --background-color: #222222;
@@ -58,7 +58,7 @@ nav div {
   flex-direction: column;
   flex-grow: 1;
   justify-content: center;
-  padding: 1em;
+  padding: var(--gap);
   text-align: center;
 }
 nav i {
@@ -74,7 +74,7 @@ nav span {
   /* flex-basis: 40%; */
   height: 30vh;
   flex-grow: 0;
-  padding: 1em;
+  padding: var(--gap);
   overflow-y: auto;
   position: sticky; bottom: 80px;
 
@@ -88,8 +88,8 @@ nav span {
 #settings > div {
   display: flex;
   flex-direction: column;
-  flex-basis: 50%;
-  gap: 1em;
+  flex-basis: calc( 50% - var(--gap) );
+  gap: var(--gap);
 }
 #settings label {
   
@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6 { text-align: var(--headlines-align); }
 h1 { text-transform: uppercase; } 
 #reader {
   margin: auto;
-  padding: 1em;
+  padding: var(--gap);
   text-align: center;
 }
 #reader p { 
