@@ -71,7 +71,22 @@ nav span {
   /* flex-basis: 40%; */
   height: 30vh;
   flex-grow: 0;
+  padding: 1em;
   position: sticky; bottom: 80px;
+}
+#settings {
+  display: flex;
+  flex-wrap: wrap;
+}
+#settings > div {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  gap: 1em;
+}
+#settings > label {
+  flex-basis: 50%;
+  gap: 1em;
 }
 
 /* Make content area fill the entire browser window */
