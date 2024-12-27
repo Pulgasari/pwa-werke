@@ -1,4 +1,5 @@
 html {
+  --brightness: 100%;
   --hyphens: auto;
   --headlines-align: center;
   --maintext-align: justify;
@@ -87,6 +88,7 @@ h1 { text-transform: uppercase; }
   text-align: center;
 }
 #reader p { 
+  opacity: var(--brightness);
   font-size: var(--maintext-fontsize);
   hyphens: var(--hyphens);
   line-height: var(--maintext-lineheight); 
