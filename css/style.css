@@ -48,6 +48,7 @@ nav div {
   flex-grow: 1;
   justify-content: center;
   padding: 1em;
+  text-align: center;
 }
 
 /* Make content area fill the entire browser window */
