@@ -75,6 +75,7 @@ const loadFont = ( name ) => {
   head.insertAdjacentHTML( 'beforeend', "<style@import url('" + url + "');</style>" );
 }
 const setFont = name => {
+  console.log('setFont() was triggered.';
   // add to <head>
   loadFont(name);
   // set variable
