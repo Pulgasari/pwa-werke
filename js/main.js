@@ -1,6 +1,10 @@
 window.onload = () => {
   'use strict';
 
+  let json1 = loadFile('json/fakedata.json');
+  let texts = JSON.parse(json1)
+  console.log(texts1);
+  
   useFetchedData( 'md/Das Wesen der Menschlichen Kopfarbeit.md');
   
   if ('serviceWorker' in navigator) {
