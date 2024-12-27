@@ -26,6 +26,26 @@ body {
   background-color: var(--background-color);
   color: var(--fontcolor);
   font-family: sans-serif;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#main {
+  flex-grow: 1;
+} 
+nav {
+  background-color: var(--background-color);
+  display: flex;
+  flex-basis: 50px;
+  flex-direction: row;
+  flex-grow: 0;
+  position: sticky; bottom: 0;
+}
+nav div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Make content area fill the entire browser window */
@@ -40,12 +60,12 @@ html,
 
 h1, h2, h3, h4, h5, h6 { text-align: var(--headlines-align); } 
 h1 { text-transform: uppercase; } 
-#main {
+main, #reader {
   margin: auto;
   padding: 1em;
   text-align: center;
 }
-#main p { 
+#main p, #reader p { 
   font-size: var(--maintext-fontsize);
   hyphens: var(--hyphens);
   line-height: var(--maintext-lineheight); 
