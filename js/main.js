@@ -6,7 +6,8 @@ window.onload = () => {
 
   useFetchedData( 'md/Das Wesen der Menschlichen Kopfarbeit.md');
 
-  init();
+  // initialization
+  init(); initFont();
 
   // register service worker
   if ('serviceWorker' in navigator) {
@@ -75,6 +76,17 @@ const loadFont = async ( name ) => {
   let url = font.url;
   let head = document.querySelector('head');
   head.insertAdjacentHTML( 'beforeend', "<style>@import url('" + url + "');</style>" );
+}
+const initFont = () => {
+  console.log('initFont() was triggered.');
+
+  if( cookie('maintext-font') ){
+    let name = cookie('maintext-font');
+    // add to <head>
+    loadFont(name);
+    // set variable
+    setVariable( 'maintext-font', name );
+  }
 }
 const setFont = ( name ) => {
   console.log('setFont() was triggered.');
