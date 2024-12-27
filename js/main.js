@@ -109,7 +109,7 @@ const setDataValue = ( name, value, selector ) => {
   el.setAttribute( 'data-' + name, value );
 }
 // The Practice
-const setFont =  ( name ) => {
+const setFont  = ( name ) => {
   console.log('setFont() was triggered.');
   // add to <head>
   loadFont(name);
@@ -172,7 +172,24 @@ function init() {
   });
   
 } 
-
+const initTexte = async () => {
+  
+  let html = '';
+  let container = document.getElementById('text');
+  let texte = await loadJSON('fakedata');
+  
+  texte.forEach( el => {
+    html.concat(
+      `<div>
+        <div class='title'>Test</div>
+        <div class='date'>00.00.0000</div>
+      </div>`
+    );
+  });
+  
+  container.addAdjacentHTML( 'beforeend', html );
+  
+}
 
 
 /*////////// S E T T I N G S //////////*/
