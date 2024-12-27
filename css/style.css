@@ -7,6 +7,8 @@ html {
   --maintext-fontcolor: '#AAA';
   --maintext-fontsize: 1em;
   --maintext-lineheight: 1.25em;
+  --fontsize: 12pt;
+  --lineheight: 1.25em;
 /*  --maintext-fontsize: 1em; */
 
 }
@@ -31,6 +33,7 @@ body {
   background-color: var(--background-color);
   color: var(--fontcolor);
   font-family: var(--maintext-font);
+  font-size: var(--fontsize);
 
   display: flex;
   flex-direction: column;
@@ -88,10 +91,10 @@ h1 { text-transform: uppercase; }
   text-align: center;
 }
 #reader p { 
-  opacity: var(--brightness);
   font-size: var(--maintext-fontsize);
   hyphens: var(--hyphens);
-  line-height: var(--maintext-lineheight); 
+  line-height: var(--lineheight);
+  opacity: var(--brightness);
   text-align: var(--maintext-align); 
 }
 
