@@ -68,7 +68,18 @@ fetch( filepath )
 const loadFont = ( name ) => {
   // get data from fonts.json
   // apply font to <head>
-} 
+  let url = '';
+  let head = document.querySelector('head');
+  head.insertAdjacentHTML( 'beforeend', "<style@import url('" + url + "');</style>" );
+}
+const setFont = name => {
+  // add to <head>
+  loadFont(name);
+  // set variable
+  setVariable( 'maintext-font', name );
+  // set cookie
+  cookie( 'maintext-font', name );
+}
 const getVariable = ( property, selector ) => {
   let el = selector ? document.querySelector(selector) : document.documentElement; // document.querySelector('html');
   var cs = getComputedStyle(el);
