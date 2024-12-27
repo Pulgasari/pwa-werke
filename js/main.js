@@ -141,7 +141,7 @@ const toggleMinitab = id => {
     console.log( 'Processing Minitab: ' + el.id + ' ...' );
     console.log( el.id + ' === ' + id );
     if( el.id === id ){
-      console.log( 'minitab to toggle hase same id!' );
+      console.log( 'minitab to toggle has same id!' );
       el.style.display = ( el.style.display === 'block' ) ? 'none' : 'block';
     } else {
       el.style.display = 'none';
