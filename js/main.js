@@ -36,8 +36,8 @@ async function useFetchedData(url) {
     console.log(result); // Do something with the result
 }
 async function loadJSON( filename ){
-  let filecontent = loadFile2( 'json/' + filename + '.json' );
-  let json = JSON.parse(filecontent);
+  let file = loadFile2( 'json/' + filename + '.json' );
+  let json = JSON.parse(file);
   return json;
 } 
 
