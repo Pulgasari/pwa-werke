@@ -57,6 +57,10 @@ nav div {
 nav i {
   font-size: 2em;
 } 
+nav span {
+  font-size: 0.75em;
+  text-transform: uppercase;
+} 
 
 .minitab {
   background-color: var(--background-color);
