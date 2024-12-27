@@ -1,14 +1,8 @@
 window.onload = () => {
   'use strict';
 
-  let json1 = loadFile('json/fakedata.json');
-  let texts1 = JSON.parse(json1);
-  console.log(texts1);
-
-let json2 = loadFile2('json/fakedata.json');
-  let texts2 = JSON.parse(json2);
-    console.log(texts2);
-      
+  let texts = loadJSON('fakedata');
+  console.log(texts);
 
   useFetchedData( 'md/Das Wesen der Menschlichen Kopfarbeit.md');
   
@@ -41,6 +35,11 @@ async function useFetchedData(url) {
   
     console.log(result); // Do something with the result
 }
+async function loadJSON( filename ){
+  let filecontent = loadFile2( 'json/' + filename + '.json' );
+  let json = JSON.parse(filecontent);
+  return json;
+} 
 
 
 
