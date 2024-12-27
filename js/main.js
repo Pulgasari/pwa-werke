@@ -27,16 +27,13 @@ async function loadFile2( url ) {
 }
 // Function to use the fetched string
 async function useFetchedData(url) {
-  //  const result = await loadFile2(url);
-
+  //  const result = await loadFile2(url)
   let container = document.getElementById('main');
   let md = await loadFile2( url );
   container.innerHTML = markdown( md );
-  
-    console.log(result); // Do something with the result
 }
 async function loadJSON( filename ){
-  let file = loadFile2( 'json/' + filename + '.json' );
+  let file = await loadFile2( 'json/' + filename + '.json' );
   let json = JSON.parse(file);
   return json;
 } 
