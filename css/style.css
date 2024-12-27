@@ -21,6 +21,10 @@ html[data-stylemode='oled'] {
   --background-color: #000000;
   --fontcolor: #CCCCCC;
 } 
+html[data-stylemode='soviet'] {
+  --background-color: #E40000;
+  --fontcolor: #FFFF00;
+} 
 
 body {
   background-color: var(--background-color);
