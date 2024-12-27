@@ -65,10 +65,10 @@ fetch( filepath )
 } 
 
 
-const loadFont = ( name ) => {
+const loadFont = async ( name ) => {
   console.log('loadFont() was triggered.';
   // get data from fonts.json
-  let fonts = loadJSON('fonts');
+  let fonts = await loadJSON('fonts');
   console.log( 'fonts', fonts );
   let font = fonts[name];
   // apply font to <head>
@@ -76,7 +76,7 @@ const loadFont = ( name ) => {
   let head = document.querySelector('head');
   head.insertAdjacentHTML( 'beforeend', "<style@import url('" + url + "');</style>" );
 }
-const setFont = name => {
+const setFont = ( name ) => {
   console.log('setFont() was triggered.';
   // add to <head>
   loadFont(name);
