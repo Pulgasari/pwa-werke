@@ -121,7 +121,7 @@ h1 { text-transform: uppercase; }
   line-height: var(--lineheight);
   text-align: var(--maintext-align); 
 }
-reader > * { 
+#reader > * { 
   opacity: var(--brightness);
 }
 
