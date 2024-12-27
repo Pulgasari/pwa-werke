@@ -1,5 +1,6 @@
 html {
   --hyphens: auto;
+  --headlines-align: center;
   --maintext-align: justify;
   --maintext-font: 'Montserrat Alternates';
   --maintext-fontcolor: '#AAA';
@@ -35,6 +36,7 @@ html,
   width: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 { text-align: var(--headlines-align); } 
 h1 { text-transform: uppercase; } 
 #main {
   margin: auto;
