@@ -149,8 +149,24 @@ function init() {
 
 
 
+/*////////// S E T T I N G S //////////*/
 
+//----- VIA BUTTONS
+// Alignment of Maintext
+document.getElementById('maintext-align-center' ).addEventListener( 'click', (event) => { setStyle( 'maintext-align', 'center'  ) };
+document.getElementById('maintext-align-justify').addEventListener( 'click', (event) => { setStyle( 'maintext-align', 'justify' ) };
+document.getElementById('maintext-align-left'   ).addEventListener( 'click', (event) => { setStyle( 'maintext-align', 'left'    ) };
+document.getElementById('maintext-align-right'  ).addEventListener( 'click', (event) => { setStyle( 'maintext-align', 'right'   ) };
 
+//----- VIA SELECT
+// Font
+document.getElementById('maintext-font').addEventListener( 'change', (event) => {
+  setFont( event.target.value );
+});
+// Stylemode (Theme)
+document.getElementById('stylemode').addEventListener( 'change', (event) => {
+  setMode( 'stylemode', event.target.value );
+});
 
 
 
