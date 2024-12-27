@@ -159,6 +159,10 @@ document.getElementById('maintext-align-left'   ).addEventListener( 'click', eve
 document.getElementById('maintext-align-right'  ).addEventListener( 'click', event => { setStyle( 'maintext-align', 'right'   ) };
 
 //----- VIA RANGE
+// Brightness
+document.getElementById('brightness').addEventListener( 'input', event => {
+  setStyle( 'brightness', event.target.value + '%' );
+});
 // Fontsize
 document.getElementById('fontsize').addEventListener( 'input', event => {
   setStyle( 'fontsize', event.target.value + 'pt' );
