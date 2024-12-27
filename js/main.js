@@ -136,6 +136,7 @@ const openTab = id => {
 }
 // Handling of Minitabs
 const toggleMinitab = id => {
+  console.log( 'toggleMinitab(' + id + ') triggered.' );
   document.querySelectorAll('minitab').forEach( el => {
     if( el.id === id ){
       el.style.display = ( el.style.display === 'block' ) ? 'none' : 'block';
