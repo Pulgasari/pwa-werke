@@ -79,6 +79,8 @@ const setFont = name => {
   setVariable( 'maintext-font', name );
   // set cookie
   cookie( 'maintext-font', name );
+  // log
+  console.log('Font was successfully set. (' + name + ')')
 }
 const getVariable = ( property, selector ) => {
   let el = selector ? document.querySelector(selector) : document.documentElement; // document.querySelector('html');
