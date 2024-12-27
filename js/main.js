@@ -134,6 +134,17 @@ const openTab = id => {
   // unhide tab
   document.getElementById(id).style.display = 'block';
 }
+// Handling of Minitabs
+const toggleMinitab = id => {
+  document.querySelectorAll('minitab').forEach( el => {
+    if( el.id === id ){
+      el.style.display = ( el.style.display === 'block' ) ? 'none' : 'block';
+    } else {
+      el.style.display = 'none';
+    }
+  });
+}
+
 
 function init() {
 
