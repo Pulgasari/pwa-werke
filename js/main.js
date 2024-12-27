@@ -159,7 +159,13 @@ function init() {
 
   // init styles
   [ 'accentcolor', 'brightness', 'fontcolor', 'fontsize', 'headlines-align', 'headlines-font', 'hyphens', 'lineheight', 'maintext-align', 'maintext-font', 'maintext-lineheight' ]
-  .forEach( id => { if( cookie(id) ){ setVariable( id, cookie(id) ) } });
+  .forEach( id => {
+    console.log( 'init: ' + id );
+    if( cookie(id) ){
+      console.log( 'cookie found! its value is: ' + cookie(id) );
+      setVariable( id, cookie(id) ) 
+    } 
+  });
   
 } 
 
