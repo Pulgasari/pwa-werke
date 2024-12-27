@@ -88,6 +88,7 @@ nav span {
 #settings > div {
   display: flex;
   flex-wrap: wrap;
+  gap: var(--gap);
   padding: var(--gap);
 }
 #settings > div > div {
@@ -95,7 +96,7 @@ nav span {
   flex-direction: column;
   flex-basis: 50%;
   /*flex-basis: calc( 50% - var(--gap) );*/
-  gap: var(--gap);
+  gap: var(--gap-small);
 }
 #settings label {
   margin-bottom: var(--gap-small);
