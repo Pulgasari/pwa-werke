@@ -66,7 +66,7 @@ fetch( filepath )
 
 
 const loadFont = async ( name ) => {
-  console.log('loadFont() was triggered.';
+  console.log('loadFont() was triggered.');
   // get data from fonts.json
   let fonts = await loadJSON('fonts');
   console.log( 'fonts', fonts ); 
