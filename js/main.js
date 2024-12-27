@@ -142,7 +142,7 @@ function init() {
   .forEach( id => { if( cookie(id) ){ setDataValue( id, cookie(id) ) } });
 
   // init styles
-  [ 'accentcolor', 'brightness', 'fontcolor', 'fontsize', 'headlines-align', 'headlines-font', 'hyphens', 'maintext-align', 'maintext-font', 'maintext-lineheight' ]
+  [ 'accentcolor', 'brightness', 'fontcolor', 'fontsize', 'headlines-align', 'headlines-font', 'hyphens', 'lineheight', 'maintext-align', 'maintext-font', 'maintext-lineheight' ]
   .forEach( id => { if( cookie(id) ){ setVariable( id, cookie(id) ) } });
   
 } 
