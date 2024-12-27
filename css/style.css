@@ -1,3 +1,6 @@
+* {
+ box-sizing: border-box;
+}
 html {
   --brightness: 100%;
   --hyphens: auto;
@@ -73,6 +76,9 @@ nav span {
   flex-grow: 0;
   padding: 1em;
   position: sticky; bottom: 80px;
+
+  font-size: 10pt;
+  line-height: 10pt;
 }
 #settings {
   display: flex;
