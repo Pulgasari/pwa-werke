@@ -37,6 +37,7 @@ html,
 /* Center the content in the browser window */
 #main {
   margin: auto;
+  padding: 1em;
   text-align: center;
 }
 #main p { text-align: justify; }
