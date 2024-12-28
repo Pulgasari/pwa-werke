@@ -26,11 +26,30 @@ window.onload = () => {
   }
 }
 
-
-
-
-
-// File Handling Methods
+/*////////// Fundamental Methods //////////*/
+//----- Get & Set Custom CSS Variables -----------------------------------
+// If no [selector] is not provided it's simply applied to <html> Element.
+const getVariable = ( property,        selector ) => {
+  let el = selector ? document.querySelector(selector) : document.documentElement;
+  var cs = getComputedStyle(el);
+  return cs.getPropertyValue(property);
+} 
+const setVariable = ( property, value, selector ) => {
+  console.log('setVariable() was triggered.');
+  let el = selector ? document.querySelector(selector) : document.documentElement;
+  el.style.setProperty( '--' + property, value );
+}
+//----- Get & Set Data Attributes (Dataset) ------------------------------
+// If no [selector] is not provided it's simply applied to <html> Element.
+const getDataValue = ( name,        selector ) => {
+  let el = selector ? document.querySelector(selector) : document.documentElement;
+  return el.getAttribute( 'data-' + name );
+} 
+const setDataValue = ( name, value, selector ) => {
+  let el = selector ? document.querySelector(selector) : document.documentElement;
+  el.setAttribute( 'data-' + name, value );
+}
+//----- Loading Local Files
 const loadFile  = async ( filepath ) => {
 
   console.log('function called: loadFile()');
@@ -70,7 +89,8 @@ const loadJSON  = async ( filename ) => {
   return json;
 } 
 
-// Fonts
+/*////////// Project Methods //////////*/
+//----- UI Methods
 const loadFont = async ( name ) => {
   console.log('loadFont() was triggered.');
   // get data from fonts.json
@@ -82,46 +102,18 @@ const loadFont = async ( name ) => {
   let head = document.querySelector('head');
   head.insertAdjacentHTML( 'beforeend', "<style>@import url('" + url + "');</style>" );
 }
-// CSS Variables
-const getVariable = ( property,        selector ) => {
-  let el = selector ? document.querySelector(selector) : document.documentElement; // document.querySelector('html');
-  var cs = getComputedStyle(el);
-  return cs.getPropertyValue(property);
-} 
-const setVariable = ( property, value, selector ) => {
-  console.log('setVariable() was triggered.');
-  let el = selector ? document.querySelector(selector) : document.documentElement; // document.querySelector('html');
-  el.style.setProperty( '--' + property, value );
-}
-// Data Attributes (Dataset)
-const getDataValue = ( name,        selector ) => {
-  let el = selector ? document.querySelector(selector) : document.documentElement; // document.querySelector('html');
-  return el.getAttribute( 'data-' + name );
-} 
-const setDataValue = ( name, value, selector ) => {
-  let el = selector ? document.querySelector(selector) : document.documentElement; // document.querySelector('html');
-  el.setAttribute( 'data-' + name, value );
-}
-// The Practice
 const setFont  = ( name ) => {
-  console.log('setFont() was triggered.');
-  // add to <head>
-  loadFont(name);
-  // set variable
-  setVariable( 'maintext-font', name );
-  // set cookie
-  cookie( 'maintext-font', name );
-  // log
-  console.log('Font was successfully set. (' + name + ')')
+  loadFont(name); // add to <head>
+  setVariable( 'maintext-font', name ); // set variable
+  cookie( 'maintext-font', name ); // set cookie
 }
 const setMode  = ( id, value ) => {
         cookie( id, value ); // set as cookie
-  setDataValue( id, value );  // set in html
+  setDataValue( id, value ); // set in html
 } 
 const setStyle = ( id, value ) => {
        cookie( id, value ); // set as cookie
   setVariable( id, value ); // set in html
-  console.log( `setStyle( ${id}, ${value} ) triggered.` );
 }
 
 // Handling of Tabs
@@ -135,12 +127,8 @@ const openTab = id => {
 }
 // Handling of Minitabs
 const toggleMinitab = id => {
-  console.log( 'toggleMinitab(' + id + ') triggered.' );
   document.querySelectorAll('.minitab').forEach( el => {
-    console.log( 'Processing Minitab: ' + el.id + ' ...' );
-    console.log( el.id + ' === ' + id );
     if( el.id === id ){
-      console.log( 'minitab to toggle has same id!' );
       el.style.display = ( el.style.display === 'block' ) ? 'none' : 'block';
     } else {
       el.style.display = 'none';
