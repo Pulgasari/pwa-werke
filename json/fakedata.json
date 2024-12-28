@@ -2,11 +2,13 @@
   {
     "id" : "1233456789",
     "authorName" : "Josef Dietzgen", 
-    "title" : "Das Wesen der Menschlichen Kopfarbeit"
+    "title" : "Das Wesen der Menschlichen Kopfarbeit",
+    "date" : "1894-09-02"
   }, 
   {
     "id" : "666777666",
     "authorName" : "Franz Mehring", 
-    "title" : "Irgendwas mit Karl Marx"
+    "title" : "Irgendwas mit Karl Marx",
+    "date" : "1897-01-22"
   } 
 ]

@@ -161,12 +161,10 @@ const renderTexte = async () => {
   console.log( 'texte', texte );
   
   texte.forEach( el => {
-    html.concat(
-      `<div>
-        <div class='title'>Test</div>
-        <div class='date'>00.00.0000</div>
-      </div>`
-    );
+    html += `<div>
+              <div class='title'>Test</div>
+              <div class='date'>00.00.0000</div>
+            </div>`;
     console.log( 'html', html );
   });
   
