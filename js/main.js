@@ -31,7 +31,7 @@ async function loadFile2( url ) {
 // Function to use the fetched string
 async function useFetchedData(url) {
   //  const result = await loadFile2(url)
-  let container = document.getElementById('reader');
+  let container = document.getElementById('text');
   let md = await loadFile2( url );
   container.innerHTML = markdown( md );
 }

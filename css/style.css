@@ -2,6 +2,7 @@
  box-sizing: border-box;
 }
 html {
+  --accent: #E40000;
   --brightness: 100%;
   --hyphens: auto;
   --headlines-align: center;
@@ -139,6 +140,20 @@ h1 { text-transform: uppercase; }
 
 .title {
   font-size: 3rem;
+}
+
+#reader {
+  display: flex;
+  flex-direction: column;
+}
+
+#progress {
+  background: #AAA;
+}
+#progress  > div {
+  background: var(--accent);
+  height: 10px;
+  width: 25%;
 }
 
 
