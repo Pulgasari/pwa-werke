@@ -1,13 +1,12 @@
 window.onload = () => {
   'use strict';
 
-  //  texts = loadJSON('fakedata');
-  //console.log(texts);
-
-  useFetchedData( 'md/Das Wesen der Menschlichen Kopfarbeit.md');
+  // render html content
+  renderText('123456789');
+  renderTexte();
 
   // initialization
-  init(); initFont(); initTexte();
+  init(); initFont(); 
 
   // register service worker
   if ('serviceWorker' in navigator) {
@@ -29,12 +28,6 @@ async function loadFile2( url ) {
     }
 }
 // Function to use the fetched string
-async function useFetchedData(url) {
-  //  const result = await loadFile2(url)
-  let container = document.getElementById('text');
-  let md = await loadFile2( url );
-  container.innerHTML = markdown( md );
-}
 async function loadJSON( filename ){
   let file = await loadFile2( 'json/' + filename + '.json' );
   let json = JSON.parse(file);
@@ -173,17 +166,24 @@ function init() {
   
 } 
 
-const loadText = async (id) => {
+const loadText = async (id) => { /* Delete */
   
   let texte = await loadJSON('fakedata');
   let text = texte.find( item => item.id === id );
-  let md = await loadFile2( 'md/' + text.title + '.md' );
+  let md = await loadFile2( 'md/' + text.id + '.md' );
   
   let container = document.getElementById('text');
   container.innerHTML = markdown( md );
   
 }
-const initTexte = async () => {
+
+
+
+const renderText = async ( id ) => {
+  let md = await loadFile2(`md/${id}.md`);
+  document.getElementById('text').innerHTML = markdown(md);
+}
+const renderTexte = async () => {
   
   let html = '';
   let container = document.getElementById('texte');
@@ -202,12 +202,6 @@ const initTexte = async () => {
   
   container.insertAdjacentHTML( 'beforeend', html );
   
-}
-
-
-const renderText = async ( id ) => {
-  let md = await loadFile2(`md/${id}.md`);
-  document.getElementById('text').innerHTML = markdown(md);
 }
 
 const setProgress = () => {
