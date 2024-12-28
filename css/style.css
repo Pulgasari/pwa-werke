@@ -136,9 +136,7 @@ h1 { text-transform: uppercase; }
   line-height: var(--lineheight);
   text-align: var(--maintext-align); 
 }
-#reader > * { 
-  /* opacity: var(--brightness); */
-}
+
 
 #reader {
   display: flex;
