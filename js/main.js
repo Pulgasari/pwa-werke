@@ -41,16 +41,7 @@ async function loadJSON( filename ){
   return json;
 } 
 
-const loadText = async (id) => {
-  
-  let texte = await loadJSON('fakedata');
-  let text = texte.find( item => item.id === id );
-  let md = await loadFile2( 'md/' + text.id + '.md' );
-  
-  let container = document.getElementById('text');
-  container.innerHTML = markdown( md );
-  
-}
+
 
 
 const loadFile = async ( filepath ) => {
@@ -181,6 +172,17 @@ function init() {
   });
   
 } 
+
+const loadText = async (id) => {
+  
+  let texte = await loadJSON('fakedata');
+  let text = texte.find( item => item.id === id );
+  let md = await loadFile2( 'md/' + text.title + '.md' );
+  
+  let container = document.getElementById('text');
+  container.innerHTML = markdown( md );
+  
+}
 const initTexte = async () => {
   
   let html = '';
