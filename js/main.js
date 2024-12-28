@@ -162,10 +162,9 @@ const renderTexte = async () => {
   
   texte.forEach( el => {
     html += `<div>
-              <div class='title'>Test</div>
-              <div class='date'>00.00.0000</div>
+              <div class='title'>${el.title}</div>
+              <div class='date'>${el.date}</div>
             </div>`;
-    console.log( html );
   });
   
   container.insertAdjacentHTML( 'beforeend', html );
