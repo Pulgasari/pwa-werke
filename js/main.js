@@ -165,7 +165,7 @@ const renderTexte = async () => {
               <div class='title'>Test</div>
               <div class='date'>00.00.0000</div>
             </div>`;
-    console.log( 'html', html );
+    console.log( html );
   });
   
   container.insertAdjacentHTML( 'beforeend', html );
