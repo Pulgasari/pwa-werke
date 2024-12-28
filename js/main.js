@@ -199,7 +199,7 @@ const setProgress = () => {
   let textHeight = document.getElementById('text').offsetHeight;
   let viewportHeight = window.innerHeight;
   let progress = scrollPosition + viewportHeight;
-  let progressInPercent = progress / textheight * 100;
+  let progressInPercent = progress / textHeight * 100;
   
   document.querySelector('#progress > div').style.width = progressInPercent + '%';
   
