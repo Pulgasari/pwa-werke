@@ -125,15 +125,16 @@ html,
 
 h1, h2, h3, h4, h5, h6 { text-align: var(--headlines-align); } 
 h1 { text-transform: uppercase; } 
+
 #text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   margin: auto;
   padding: var(--gap);
   text-align: center;
 }
 #text p { 
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   font-size: var(--maintext-fontsize);
   hyphens: var(--hyphens);
   line-height: var(--lineheight);
