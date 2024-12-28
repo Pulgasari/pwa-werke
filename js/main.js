@@ -193,6 +193,18 @@ const initTexte = async () => {
   
 }
 
+const setProgress = () => {
+  
+  let scrollPosition = window.scrollY;
+  let textHeight = document.getElementById('text').offsetHeight;
+  let viewportHeight = window.innerHeight;
+  let progress = scrollPosition + viewportHeight;
+  let progressInPercent = progress / textheight * 100;
+  
+  document.querySelector('#progress > div').style.width = progressInPercent + '%';
+  
+}
+
 
 /*////////// S E T T I N G S //////////*/
 
