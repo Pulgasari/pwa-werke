@@ -178,7 +178,7 @@ const loadText = async (id) => { /* Delete */
 }
 
 
-
+// Render Methods
 const renderText = async ( id ) => {
   let md = await loadFile2(`md/${id}.md`);
   document.getElementById('text').innerHTML = markdown(md);
@@ -204,6 +204,7 @@ const renderTexte = async () => {
   
 }
 
+// Reading Progress Bar
 const setProgress = () => {
   
   let scrollPosition = window.scrollY;
@@ -215,9 +216,7 @@ const setProgress = () => {
   document.querySelector('#progress > div').style.width = progressInPercent + '%';
   
 }
-document.addEventListener( 'scroll', event => {
-  setProgress();
-});
+document.addEventListener( 'scroll', event => { setProgress() });
 
 /*////////// S E T T I N G S //////////*/
 
@@ -232,18 +231,9 @@ document.getElementById('maintext-align-left'   ).addEventListener( 'click', eve
 document.getElementById('maintext-align-right'  ).addEventListener( 'click', event => { setStyle( 'maintext-align', 'right'   )});
 
 //----- VIA RANGE
-// Brightness
-document.getElementById('brightness').addEventListener( 'input', event => {
-  setStyle( 'brightness', event.target.value + '%' );
-});
-// Fontsize
-document.getElementById('fontsize').addEventListener( 'input', event => {
-  setStyle( 'fontsize', event.target.value + 'pt' );
-});
-// Lineheight
-document.getElementById('lineheight').addEventListener( 'input', event => {
-  setStyle( 'lineheight', event.target.value + 'em' );
-});
+/* Brightness */ document.getElementById('brightness').addEventListener( 'input', event => { setStyle( 'brightness', event.target.value + '%'  ); });
+/* Fontsize   */ document.getElementById('fontsize'  ).addEventListener( 'input', event => { setStyle(   'fontsize', event.target.value + 'pt' ); });
+/* Lineheight */ document.getElementById('lineheight').addEventListener( 'input', event => { setStyle( 'lineheight', event.target.value + 'em' ); });
 
 //----- VIA SELECT
 // Font
