@@ -184,7 +184,7 @@ function init() {
 const initTexte = async () => {
   
   let html = '';
-  let container = document.getElementById('text');
+  let container = document.getElementById('texte');
   let texte = await loadJSON('fakedata');
   
   console.log( 'texte', texte );
