@@ -131,6 +131,9 @@ h1 { text-transform: uppercase; }
   text-align: center;
 }
 #text p { 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   font-size: var(--maintext-fontsize);
   hyphens: var(--hyphens);
   line-height: var(--lineheight);
