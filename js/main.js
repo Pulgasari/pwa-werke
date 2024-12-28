@@ -5,39 +5,33 @@ window.onload = () => {
   renderText('123456789');
   renderTexte();
 
-  // initialization
-  init(); initFont(); 
+  // init font
+  if( cookie('maintext-font') ){ // check if the related cookie exists and is not empty
+    let name = cookie('maintext-font'); // get fontname from cookie
+    loadFont(name); // add html/css to <head> to import font from Google Fonts
+    setVariable( 'maintext-font', name ); // set fontname to our custom css variable
+  }
+  
+  // initialize modes
+  [ 'stylemode', 'viewmode' ]
+  .forEach( id => { if( cookie(id) ){ setDataValue( id, cookie(id) ) } });
 
+  // init styles
+  [ 'accentcolor', 'brightness', 'fontcolor', 'fontsize', 'headlines-align', 'headlines-font', 'hyphens', 'lineheight', 'maintext-align', 'maintext-font', 'maintext-lineheight' ]
+  .forEach( id => { if( cookie(id) ){ setVariable( id, cookie(id) )}});
+  
   // register service worker
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./sw.js');
   }
 }
 
-async function loadFile2( url ) {
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.text(); // Assuming the response is a text string
-        return data;
-    } catch (error) {
-        console.error('Fetch error:', error);
-        return 'Error fetching data';
-    }
-}
-// Function to use the fetched string
-async function loadJSON( filename ){
-  let file = await loadFile2( 'json/' + filename + '.json' );
-  let json = JSON.parse(file);
-  return json;
-} 
 
 
 
 
-const loadFile = async ( filepath ) => {
+// File Handling Methods
+const loadFile  = async ( filepath ) => {
 
   console.log('function called: loadFile()');
   console.log( filepath );
@@ -57,6 +51,24 @@ fetch( filepath )
   })
 
 } 
+const loadFile2 = async ( filepath ) => {
+    try {
+        const response = await fetch( filepath );
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.text(); // Assuming the response is a text string
+        return data;
+    } catch (error) {
+        console.error('Fetch error:', error);
+        return 'Error fetching data';
+    }
+}
+const loadJSON  = async ( filename ) => {
+  let file = await loadFile2( 'json/' + filename + '.json' );
+  let json = JSON.parse(file);
+  return json;
+} 
 
 // Fonts
 const loadFont = async ( name ) => {
@@ -69,17 +81,6 @@ const loadFont = async ( name ) => {
   let url = font.url;
   let head = document.querySelector('head');
   head.insertAdjacentHTML( 'beforeend', "<style>@import url('" + url + "');</style>" );
-}
-const initFont = () => {
-  console.log('initFont() was triggered.');
-
-  if( cookie('maintext-font') ){
-    let name = cookie('maintext-font');
-    // add to <head>
-    loadFont(name);
-    // set variable
-    setVariable( 'maintext-font', name );
-  }
 }
 // CSS Variables
 const getVariable = ( property,        selector ) => {
@@ -147,25 +148,6 @@ const toggleMinitab = id => {
   });
 }
 
-
-function init() {
-
-  // initialize modes
-  [ 'stylemode', 'viewmode' ]
-  .forEach( id => { if( cookie(id) ){ setDataValue( id, cookie(id) ) } });
-
-  // init styles
-  [ 'accentcolor', 'brightness', 'fontcolor', 'fontsize', 'headlines-align', 'headlines-font', 'hyphens', 'lineheight', 'maintext-align', 'maintext-font', 'maintext-lineheight' ]
-  .forEach( id => {
-    console.log( 'init: ' + id );
-    if( cookie(id) ){
-      console.log( 'cookie found! its value is: ' + cookie(id) );
-      setVariable( id, cookie(id) ) 
-    } 
-  });
-  
-} 
-
 const loadText = async (id) => { /* Delete */
   
   let texte = await loadJSON('fakedata');
@@ -177,8 +159,7 @@ const loadText = async (id) => { /* Delete */
   
 }
 
-
-// Render Methods
+// Render HTML Methods
 const renderText = async ( id ) => {
   let md = await loadFile2(`md/${id}.md`);
   document.getElementById('text').innerHTML = markdown(md);
