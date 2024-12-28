@@ -154,7 +154,7 @@ h1 { text-transform: uppercase; }
 }
 #progress  > div {
   background: var(--accent);
-  height: 10px;
+  height: 5px;
   width: 25%;
 }
 
