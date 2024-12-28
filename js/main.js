@@ -204,7 +204,9 @@ const setProgress = () => {
   document.querySelector('#progress > div').style.width = progressInPercent + '%';
   
 }
-
+document.addEventListener( 'scroll', event => {
+  setProgress();
+});
 
 /*////////// S E T T I N G S //////////*/
 
