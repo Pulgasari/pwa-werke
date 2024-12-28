@@ -1,13 +1,13 @@
 window.onload = () => {
   'use strict';
 
-  let texts = loadJSON('fakedata');
-  console.log(texts);
+  //  texts = loadJSON('fakedata');
+  //console.log(texts);
 
   useFetchedData( 'md/Das Wesen der Menschlichen Kopfarbeit.md');
 
   // initialization
-  init(); initFont();
+  init(); initFont(); initTexte();
 
   // register service worker
   if ('serviceWorker' in navigator) {
