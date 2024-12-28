@@ -151,6 +151,8 @@ h1 { text-transform: uppercase; }
 
 #progress {
   background: #AAA;
+  position: sticky;
+  top: 0;
 }
 #progress  > div {
   background: var(--accent);
