@@ -204,6 +204,12 @@ const initTexte = async () => {
   
 }
 
+
+const renderText = async ( id ) => {
+  let md = await loadFile2(`md/${id}.md`);
+  document.getElementById('text').innerHTML = markdown(md);
+}
+
 const setProgress = () => {
   
   let scrollPosition = window.scrollY;
