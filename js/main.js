@@ -198,7 +198,7 @@ const initTexte = async () => {
     );
   });
   
-  container.addAdjacentHTML( 'beforeend', html );
+  container.insertAdjacentHTML( 'beforeend', html );
   
 }
 
