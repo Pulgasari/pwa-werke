@@ -105,10 +105,10 @@ const loadFont = async ( name ) => {
   let head = document.querySelector('head');
   head.insertAdjacentHTML( 'beforeend', "<style>@import url('" + url + "');</style>" );
 }
-const setFont  = ( name ) => {
+const setFont  = ( variable, name ) => {
   loadFont(name); // add to <head>
-  setVariable( 'maintext-font', name ); // set variable
-  cookie( 'maintext-font', name ); // set cookie
+  setVariable( variable, name ); // set variable
+  cookie( variable, name ); // set cookie
 }
 const setMode  = ( id, value ) => {
         cookie( id, value ); // set as cookie
@@ -263,9 +263,9 @@ document.getElementById('maintext-align-right'  ).addEventListener( 'click', eve
 
 //----- VIA SELECT
 // Font
-document.getElementById('maintext-font').addEventListener( 'change', event => {
-  setFont( event.target.value );
-});
+document.getElementById('blockquote-font').addEventListener( 'change', event => { setFont( 'blockquote-font', event.target.value ); });
+document.getElementById( 'headlines-font').addEventListener( 'change', event => { setFont(  'headlines-font', event.target.value ); });
+document.getElementById(  'maintext-font').addEventListener( 'change', event => { setFont(   'maintext-font', event.target.value ); });
 // Stylemode (Theme)
 document.getElementById('stylemode').addEventListener( 'change', event => {
   setMode( 'stylemode', event.target.value );
