@@ -187,7 +187,7 @@ h1 { text-transform: uppercase; }
 }
 
 #texte-list > div {
-  background: #AAA2;
+  background: #AAA1;
   display: flex;
   flex-direction: row;
   gap: var(--gap);
