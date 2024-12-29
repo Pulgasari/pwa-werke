@@ -24,7 +24,7 @@ window.onload = () => {
   .forEach( id => { if( cookie(id) ){ setVariable( id, cookie(id) )}});
   
   // register service worker
-  if ('serviceWorker' in navigator) {
+  if( 'serviceWorker' in navigator ){
     navigator.serviceWorker.register('./sw.js');
   }
 }
@@ -188,7 +188,6 @@ const renderTexteOld = async () => {
   document.getElementById('texte-list').insertAdjacentHTML( 'beforeend', html );
   
 }
-
 const renderNavigation = () => {
   
   const elements = [
