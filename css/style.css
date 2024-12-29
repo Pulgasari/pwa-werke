@@ -37,7 +37,7 @@ html[data-stylemode='light'] {
   /*--background-contrast-color: oklch(from var(--background-color) calc(l - .20) c h);*/
 } 
 html[data-stylemode='oled'] {
-  --background-color: #0A0A0A;
+  --background-color: #0C0C0C;
   --fontcolor: #CCCCCC;
   --blockquote-fontcolor: #AAAAAA;
   --background-contrast-color: #111;
