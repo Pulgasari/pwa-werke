@@ -150,22 +150,24 @@ h1 { text-transform: uppercase; }
   padding: var(--gap);
   text-align: center;
 }
-#text blockquote { 
-  border-left: 5px solid var(--accent);
-  color: var(--blockquote-fontolor);
-  font-size: var(--maintext-fontsize);
-  hyphens: var(--hyphens);
-  line-height: var(--lineheight);
-  padding: 0 var(--gap);
-  text-align: var(--blockquote-align);
-}
 #text p { 
   font-size: var(--maintext-fontsize);
   hyphens: var(--hyphens);
   line-height: var(--lineheight);
   text-align: var(--maintext-align); 
 }
-
+#text blockquote { 
+  border-left: 5px solid var(--accent);
+  padding: 0 var(--gap);
+}
+#text blockquote p { 
+  border-left: 5px solid var(--accent);
+  color: var(--blockquote-fontolor);
+  font-size: var(--maintext-fontsize);
+  hyphens: var(--hyphens);
+  line-height: var(--lineheight);
+  text-align: var(--blockquote-align);
+}
 
 #reader {
   display: flex;
