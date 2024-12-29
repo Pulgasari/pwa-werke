@@ -23,7 +23,7 @@ html {
   background: #000000;
 }
 html[data-stylemode='dark'] {
-  --background-color: #222222;
+  --background-color: #111111;
   --fontcolor: #CCCCCC;
   --blockquote-fontolor: #AAAAAA;
 }
@@ -90,6 +90,9 @@ nav span {
   text-transform: uppercase;
 } 
 
+.tab {
+  min-height: 100vh;
+}
 .minitab {
   background-color: var(--background-color);
   /* flex-basis: 40%; */
