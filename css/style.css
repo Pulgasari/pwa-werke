@@ -215,6 +215,7 @@ h1 { text-transform: uppercase; }
 }
 #texte-list > div .title {
   flex-grow: 1;
+  font-weight: bold;
 }
 #texte-list > div .date {
   flex-grow: 0;
