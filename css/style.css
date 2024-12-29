@@ -33,7 +33,7 @@ html[data-stylemode='light'] {
   --background-color: #FFFFFF;
   --fontcolor: #222222;
   --blockquote-fontcolor: #AAAAAA;
-  --background-contrast-color: #CCC;
+  --background-contrast-color: #CFCFCF;
   /*--background-contrast-color: oklch(from var(--background-color) calc(l - .20) c h);*/
 } 
 html[data-stylemode='oled'] {
