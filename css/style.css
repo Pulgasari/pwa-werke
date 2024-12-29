@@ -37,7 +37,7 @@ html[data-stylemode='light'] {
   /*--background-contrast-color: oklch(from var(--background-color) calc(l - .20) c h);*/
 } 
 html[data-stylemode='oled'] {
-  --background-color: #000000;
+  --background-color: #0A0A0A;
   --fontcolor: #CCCCCC;
   --blockquote-fontcolor: #AAAAAA;
   --background-contrast-color: #111;
@@ -214,11 +214,13 @@ h1 { text-transform: uppercase; }
 
 #texte-list > div {
   /*background: #AAA1;*/
-  background: var(--background-contrast-color);
   display: flex;
   flex-direction: row;
   gap: var(--gap);
   padding: var(--gap);
+}
+#texte-list > div:nth-child(2n+1) {
+  background: var(--background-contrast-color);
 }
 #texte-list > div .title {
   flex-grow: 1;
