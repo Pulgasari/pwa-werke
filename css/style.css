@@ -25,23 +25,27 @@ html {
 html[data-stylemode='dark'] {
   --background-color: #111111;
   --fontcolor: #CCCCCC;
-  --blockquote-fontolor: #AAAAAA;
+  --blockquote-fontcolor: #AAAAAA;
+  --background-contrast-color: rgb(from var(--background-color) 200 g b);
 }
 html[data-stylemode='light'] {
   --background-color: #FFFFFF;
   --fontcolor: #222222;
-  --blockquote-fontolor: #AAAAAA;
+  --blockquote-fontcolor: #AAAAAA;
+  --background-contrast-color: rgb(from var(--background-color) 200 g b);
 } 
 html[data-stylemode='oled'] {
   --background-color: #000000;
   --fontcolor: #CCCCCC;
-  --blockquote-fontolor: #AAAAAA;
+  --blockquote-fontcolor: #AAAAAA;
+  --background-contrast-color: rgb(from var(--background-color) 200 g b);
 } 
 html[data-stylemode='soviet'] {
   --accent: #FFFFFF;
   --background-color: #E40000;
   --fontcolor: #FFFF00;
-  --blockquote-fontolor: #AAAAAA;
+  --blockquote-fontcolor: #AAAAAA;
+  --background-contrast-color: rgb(from var(--background-color) 200 g b);
 } 
 
 body {
@@ -80,6 +84,7 @@ nav div {
   justify-content: center;
   padding: var(--gap);
   text-align: center;
+  border-left: 1px solid var(--background-contrast-color);
 }
 nav i {
   font-size: 32px;
@@ -161,7 +166,7 @@ h1 { text-transform: uppercase; }
   padding: 0 var(--gap);
 }
 #text blockquote p { 
-  color: var(--blockquote-fontolor);
+  color: var(--blockquote-fontcolor);
   font-size: var(--maintext-fontsize);
   hyphens: var(--hyphens);
   line-height: var(--lineheight);
@@ -194,7 +199,8 @@ h1 { text-transform: uppercase; }
 }
 
 #texte-list > div {
-  background: #AAA1;
+  /*background: #AAA1;*/
+  background: var(--background-contrast-color);
   display: flex;
   flex-direction: row;
   gap: var(--gap);
