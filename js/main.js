@@ -154,6 +154,8 @@ const loadText = async (id) => { /* Delete */
 const renderText = async ( id ) => {
   if( !id ){ return; }
   let md = await loadFile2(`md/${id}.md`);
+  const markdownit = window.markdownit();
+  //document.getElementById('text').innerHTML = markdownit.render(md);
   document.getElementById('text').innerHTML = markdown(md);
 }
 const renderTexte = async () => {
