@@ -159,10 +159,7 @@ const renderText = async ( id ) => {
 const renderTexte = async () => {
   
   let html = '';
-  let container = document.getElementById('texte-list');
   let texte = await loadJSON('fakedata');
-  
-  console.log( 'texte', texte );
   
   texte.forEach( el => {
     html += `<div>
@@ -173,7 +170,7 @@ const renderTexte = async () => {
             </div>`;
   });
   
-  container.insertAdjacentHTML( 'beforeend', html );
+  document.getElementById('texte-list').insertAdjacentHTML( 'beforeend', html );
   
 }
 
