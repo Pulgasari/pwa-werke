@@ -189,6 +189,47 @@ const renderTexteOld = async () => {
   
 }
 
+const renderNavigation = () => {
+  
+  const elements = [
+    {
+      "title" : "Texte",
+        "url" : "/",
+       "icon" : "bars"
+    },
+    {
+      "title" : "Autoren",
+        "url" : "/authors.html",
+       "icon" : "user"
+    },
+    {
+      "title" : "Favoriten",
+        "url" : "/?fav=1",
+       "icon" : "star"
+    },
+    {
+      "title" : "Lesezeichen",
+        "url" : "/",
+       "icon" : "bookmark"
+    },
+    {
+      "title" : "Konto",
+        "url" : "/account.html",
+       "icon" : "address-card"
+    },
+  ];
+    
+    const html = elements.map( el => `
+      <a href="${el.url}">
+        <i class="fa-solid fa-${el.icon}"></i>
+        <span>${el.title}</span>
+      </a>
+    `).join('');
+
+    document.getElementById('nav').insertAdjacentHTML('beforeend', html);
+  
+};
+
 // Reading Progress Bar
 const setProgress = () => {
   
