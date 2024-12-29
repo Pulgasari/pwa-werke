@@ -26,26 +26,26 @@ html[data-stylemode='dark'] {
   --background-color: #111111;
   --fontcolor: #CCCCCC;
   --blockquote-fontcolor: #AAAAAA;
-  --background-contrast-color: rgb(from var(--background-color) 200 g b);
+  --background-contrast-color: oklch(from var(--background-color) calc(l - .20) c h);
 }
 html[data-stylemode='light'] {
   --background-color: #FFFFFF;
   --fontcolor: #222222;
   --blockquote-fontcolor: #AAAAAA;
-  --background-contrast-color: rgb(from var(--background-color) 200 g b);
+  --background-contrast-color: oklch(from var(--background-color) calc(l - .20) c h);
 } 
 html[data-stylemode='oled'] {
   --background-color: #000000;
   --fontcolor: #CCCCCC;
   --blockquote-fontcolor: #AAAAAA;
-  --background-contrast-color: rgb(from var(--background-color) 200 g b);
+  --background-contrast-color: oklch(from var(--background-color) calc(l + .20) c h);
 } 
 html[data-stylemode='soviet'] {
   --accent: #FFFFFF;
   --background-color: #E40000;
   --fontcolor: #FFFF00;
   --blockquote-fontcolor: #AAAAAA;
-  --background-contrast-color: rgb(from var(--background-color) 200 g b);
+  --background-contrast-color: oklch(from var(--background-color) calc(l + .20) c h);
 } 
 
 body {
