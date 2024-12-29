@@ -4,7 +4,8 @@ var filesToCache = [
   //'/index.html',
   //'/css/style.css',
   //'/js/main.js',
-  '/js/markdown-it.14.1.0.min.js'
+  '/js/markdown-it.14.1.0.min.js',
+  '/js/markdown-it-footnote.4.0.0.min.js'
 ];
 
 /* Start the service worker and cache all of the app's content */
