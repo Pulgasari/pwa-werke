@@ -38,6 +38,7 @@ html[data-stylemode='oled'] {
   --blockquote-fontolor: #AAAAAA;
 } 
 html[data-stylemode='soviet'] {
+  --accent: #FFFFFF;
   --background-color: #E40000;
   --fontcolor: #FFFF00;
   --blockquote-fontolor: #AAAAAA;
