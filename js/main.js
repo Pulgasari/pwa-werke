@@ -140,14 +140,10 @@ const toggleMinitab = id => {
 }
 
 const loadText = async (id) => { /* Delete */
-  
   let texte = await loadJSON('fakedata');
   let text = texte.find( item => item.id === id );
   let md = await loadFile2( 'md/' + text.id + '.md' );
-  
-  let container = document.getElementById('text');
-  container.innerHTML = markdown( md );
-  
+  document.getElementById('text').innerHTML = markdown( md );
 }
 
 // Render HTML Methods
