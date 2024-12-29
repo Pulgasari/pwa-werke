@@ -38,7 +38,7 @@ html[data-stylemode='oled'] {
   --background-color: #000000;
   --fontcolor: #CCCCCC;
   --blockquote-fontcolor: #AAAAAA;
-  --background-contrast-color: oklch(from var(--background-color) calc(l + .20) c h);
+  --background-contrast-color: oklch(from var(--background-color) calc(l + .10) c h);
 } 
 html[data-stylemode='soviet'] {
   --accent: #FFFFFF;

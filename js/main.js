@@ -242,8 +242,8 @@ document.getElementById('maintext-align-right'  ).addEventListener( 'click', eve
 
 //----- VIA SELECT
 // Font
-document.getElementById('blockquote-font').addEventListener( 'change', event => { setFont( 'blockquote-font', event.target.value ); });
-document.getElementById( 'headlines-font').addEventListener( 'change', event => { setFont(  'headlines-font', event.target.value ); });
+//document.getElementById('blockquote-font').addEventListener( 'change', event => { setFont( 'blockquote-font', event.target.value ); });
+//document.getElementById( 'headlines-font').addEventListener( 'change', event => { setFont(  'headlines-font', event.target.value ); });
 document.getElementById(  'maintext-font').addEventListener( 'change', event => { setFont(   'maintext-font', event.target.value ); });
 // Stylemode (Theme)
 document.getElementById('stylemode').addEventListener( 'change', event => { setMode( 'stylemode', event.target.value ); });
