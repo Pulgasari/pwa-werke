@@ -1,8 +1,11 @@
 window.onload = () => {
   'use strict';
+  
+  let urlParams = new URLSearchParams(document.location.search);
+  let id = urlParams.get('id'); // is 
 
   // render html content
-  renderText('123456789');
+  renderText(id);
   renderTexte();
 
   // init font
@@ -149,6 +152,7 @@ const loadText = async (id) => { /* Delete */
 
 // Render HTML Methods
 const renderText = async ( id ) => {
+  if( !id ){ return; }
   let md = await loadFile2(`md/${id}.md`);
   document.getElementById('text').innerHTML = markdown(md);
 }
@@ -162,7 +166,9 @@ const renderTexte = async () => {
   
   texte.forEach( el => {
     html += `<div>
-              <div class='title'>${el.title}</div>
+              <div class='title'>
+                <a href='?id=${el.id}'>${el.title}</a>
+              </div>
               <div class='date'>${el.date}</div>
             </div>`;
   });
