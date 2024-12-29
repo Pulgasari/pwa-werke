@@ -160,6 +160,22 @@ const renderText = async ( id ) => {
 }
 const renderTexte = async () => {
   
+    const texte = await loadJSON('fakedata');
+    
+    const html = texte.map( el => `
+      <div>
+        <div class='title'>
+          <a href='?id=${el.id}'>${el.title}</a>
+        </div>
+        <div class='date'>${el.date}</div>
+      </div>
+    `).join('');
+
+    document.getElementById('texte-list').insertAdjacentHTML('beforeend', html);
+  
+};
+const renderTexteOld = async () => {
+  
   let html = '';
   let texte = await loadJSON('fakedata');
   
