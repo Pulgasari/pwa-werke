@@ -155,7 +155,7 @@ const renderText = async ( id ) => {
 const renderTexte = async () => {
   
   let html = '';
-  let container = document.getElementById('texte');
+  let container = document.getElementById('texte-list');
   let texte = await loadJSON('fakedata');
   
   console.log( 'texte', texte );
