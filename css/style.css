@@ -64,6 +64,7 @@ a {
 } 
 nav {
   background-color: var(--background-color);
+  box-shadow: 0 0 20px #0005;
   display: flex;
   flex-basis: 100px; height: 100px;
   flex-direction: row;
