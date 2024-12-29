@@ -74,7 +74,7 @@ nav {
   background-color: var(--background-color);
   box-shadow: 0 0 20px #0005;
   display: flex;
-  flex-basis: 60px; height: 60px;
+  flex-basis: 70px; height: 70px;
   flex-direction: row;
   flex-grow: 0;
   flex-shrink: 0;
@@ -112,7 +112,7 @@ nav span {
   flex-grow: 0;
   padding: var(--gap);
   overflow-y: auto;
-  position: sticky; bottom: 60px;
+  position: sticky; bottom: 70px;
 
   font-size: 10pt;
   line-height: 10pt;
