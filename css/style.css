@@ -48,6 +48,10 @@ body {
   flex-direction: column;
 }
 
+a {
+  color: var(--accent);
+}
+
 #main {
   flex-grow: 1;
 } 
