@@ -94,7 +94,7 @@ nav div:first-child {
   border-left: none;
 }
 nav i {
-  font-size: 32px;
+  font-size: 24px;
 } 
 nav span {
   font-size: 8pt;
@@ -112,7 +112,7 @@ nav span {
   flex-grow: 0;
   padding: var(--gap);
   overflow-y: auto;
-  position: sticky; bottom: 80px;
+  position: sticky; bottom: 60px;
 
   font-size: 10pt;
   line-height: 10pt;
