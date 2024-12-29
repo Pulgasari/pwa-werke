@@ -7,6 +7,8 @@ html {
   --accent: #E40000;
   --brightness: 100%;
   --hyphens: auto;
+  --blockquote-align: left;
+  --blockquote-font: 'Roboto Slab';
   --headlines-align: center;
   --maintext-align: justify;
   --maintext-font: 'Montserrat';
@@ -23,18 +25,22 @@ html {
 html[data-stylemode='dark'] {
   --background-color: #222222;
   --fontcolor: #CCCCCC;
+  --blockquote-fontolor: #AAAAAA;
 }
 html[data-stylemode='light'] {
   --background-color: #FFFFFF;
   --fontcolor: #222222;
+  --blockquote-fontolor: #AAAAAA;
 } 
 html[data-stylemode='oled'] {
   --background-color: #000000;
   --fontcolor: #CCCCCC;
+  --blockquote-fontolor: #AAAAAA;
 } 
 html[data-stylemode='soviet'] {
   --background-color: #E40000;
   --fontcolor: #FFFF00;
+  --blockquote-fontolor: #AAAAAA;
 } 
 
 body {
@@ -137,6 +143,13 @@ h1 { text-transform: uppercase; }
   margin: auto;
   padding: var(--gap);
   text-align: center;
+}
+#text blockquote { 
+  color: var(--blockquote-fontolor);
+  font-size: var(--maintext-fontsize);
+  hyphens: var(--hyphens);
+  line-height: var(--lineheight);
+  text-align: var(--blockquote-align); 
 }
 #text p { 
   font-size: var(--maintext-fontsize);
