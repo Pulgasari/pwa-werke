@@ -1,9 +1,15 @@
 [
   {
     "id" : "111222333",
-    "authorName" : "Josef Dietzgen", 
+    "authorName" : "Franz Mehring", 
     "title" : "Karl Marx und das Gleichnis",
     "date" : "1908-03-13"
+  }, 
+  {
+    "id" : "222333222",
+    "authorName" : "Franz Mehring", 
+    "title" : "Kapital und Sprae",
+    "date" : "1892-06-22"
   }, 
   {
     "id" : "123456789",
