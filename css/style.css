@@ -87,7 +87,7 @@ nav div {
   border-left: 1px solid var(--background-contrast-color);
 }
 nav div:first-child {
-  border-left none;
+  border-left: none;
 }
 nav i {
   font-size: 32px;
